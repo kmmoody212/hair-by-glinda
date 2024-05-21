@@ -1,26 +1,6 @@
-/*
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1ebf4;
 }
-
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-  background: rgb(171, 8, 8);
-  background: linear-gradient(
-    248deg,
-    rgba(171, 8, 8, 1) 35%,
-    rgba(105, 26, 15, 1) 71%
-  );
-}
-
-header .phoneNum {
-  display: flex;
-  font-size: 20px;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 300;
-}
-*/
