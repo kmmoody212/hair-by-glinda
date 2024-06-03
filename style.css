@@ -1,6 +1,53 @@
+@font-face {
+  font-family: "great_vibesregular";
+  src: url("fonts/greatvibes-regular-webfont.woff2") format("woff2"),
+    url("fonts/greatvibes-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rubikmedium";
+  src: url("fonts/rubik-medium-webfont.woff2") format("woff2"),
+    url("fonts/rubik-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --base-color: #F1EBF4;
+  --accent-clr: #EADBD2;
+  --primary-clr: #C6A6E8;
+  --secondary-clr: #5E4C72;
+  --dark-clr: #392c46;
+
+  --ff: tahoma, sans-serif;
+  --ff-cursive: "great_vibesregular", tahoma, sans-serif;
+  --ff-normal: "rubikmedium", tahoma, sans-serif;
+
+}
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--ff-normal);
+  font-size: 16px;
   margin: 0;
   padding: 0;
-  background-color: #f1ebf4;
+  background-color: var(--base-color);
 }
+
+
+h1 {
+  font-family: var(--ff-cursive);
+  font-size: 6rem;
+  color: var(--secondary-clr);
+}
+
+h2 {
+  font-family: var(--ff-cursive);
+  letter-spacing: 0.05rem;
+  font-size: 3rem;
+  color: var(--secondary-clr);
+}
+
+/* Glinda's image have a box-shadow?
+/* [src$='.jpeg'] will grab any image src that ends in ".jpeg"
