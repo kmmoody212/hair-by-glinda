@@ -36,10 +36,43 @@ body {
 }
 
 
+
 h1 {
   font-family: var(--ff-cursive);
   font-size: 6rem;
-  color: var(--secondary-clr);
+  color: var(--base-color);
+  background-color: var(--primary-clr);
+  padding-top: 40px;
+  padding-left: 5vw;
+  margin-bottom: 0;
+}
+
+p {
+  background-color: var(--primary-clr);
+  text-align: right;
+  color: var(--base-color);
+  margin-top: 0;
+  padding-bottom: 56px;
+  padding-top: 32px;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+#btn {
+  background-color: var(--primary-clr);
+  margin-top: 0;
+  padding-bottom: 28px;
+
+}
+button {
+  border: 1px solid var(--secondary-clr);
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background-color: var(--secondary-clr);
+  color: var(--base-color);
+  font-family: var(--ff-normal);
+  font-size: 1rem;
+  border-radius: 100%;
 }
 
 h2 {
