@@ -6,11 +6,31 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "rubikmedium";
-  src: url("fonts/rubik-medium-webfont.woff2") format("woff2"),
-    url("fonts/rubik-medium-webfont.woff") format("woff");
-  font-weight: normal;
+.rubik-normal {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-light {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rubik-semi-bold {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.rubik-bold {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -21,9 +41,11 @@
   --secondary-clr: #5E4C72;
   --dark-clr: #392c46;
 
-  --ff: tahoma, sans-serif;
   --ff-cursive: "great_vibesregular", tahoma, sans-serif;
-  --ff-normal: "rubikmedium", tahoma, sans-serif;
+  --ff-normal: "rubik-normal", sans-serif;
+  --ff-light: "rubik-light", sans-serif;
+  --ff-semi-bold: "rubik-semi-bold", sans-serif;
+  --ff-bold: "rubik-bold", sans-serif;
 
 }
 
@@ -39,69 +61,101 @@ body {
   background-color: var(--base-color);
 }
 
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER */
+
 header {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: auto;
 }
 
 header img {
   align-self: center;
+  justify-self: center;
 }
 
-#hero {
+#logo {
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-  background-color: #C6A6E8;
+  
+}
+
+#profile-pic {
+  width: 65%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 8px solid var(--accent-clr);
+  padding: 12px;
+  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
+        
+}
+/* HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO */
+
+#hero {
+  background-image: url(images/pawel-czerwinski-FLjfMUyng2Y-unsplash.jpg);
+  background-repeat: repeat;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit);
   padding: 3%;
   margin: 0;
+  gap: 15px;
   
+  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
 }
 
 h1 {
   font-family: var(--ff-cursive);
   font-size: 6rem;
-  color: var(--base-color);
+  color: var(--secondary-clr);
   grid-column: 1;
   margin: 0;
-  
-  
+  justify-self: center;
 }
 
 p {
-  color: var(--base-color);
+  color: var(--secondary-clr);
   font-size: 1.2rem;
+  font-weight: 600;
   grid-column: 2;
   grid-row: 1 / 3;
   align-self: center;
   padding: 8px;
   margin: auto;
-  
-  
-  
-
+  line-height: 2.5rem;
 }
 
 #btn {
-  background-color: var(--primary-clr);
   grid-column: 1;
   padding: 0;
   text-align: center;
-  margin-right: 25%;
-  margin-top: 10%;
-
-
+  align-self: end;
+  
 }
+
 button {
-  border: 1px solid var(--secondary-clr);
+  border: 1px solid var(---clr);
   padding-top: 28px;
   padding-bottom: 28px;
-  background-color: var(--secondary-clr);
-  color: var(--base-color);
-  font-family: var(--ff-normal);
+  background-color: var(--accent-clr);
+  color: var(--secondary-clr);
+  font-weight: 600;
   font-size: 1rem;
   border-radius: 100%;
+  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
+}
+
+button:hover {
+  box-shadow: none;
+  font-style: italic;
+  cursor: pointer;
 }
 
 h2 {
@@ -109,7 +163,10 @@ h2 {
   letter-spacing: 0.05rem;
   font-size: 3rem;
   color: var(--secondary-clr);
+  text-align: center;
 }
 
-/* Glinda's image have a box-shadow?
+/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
+
+
 /* [src$='.jpeg'] will grab any image src that ends in ".jpeg"
