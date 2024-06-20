@@ -49,13 +49,8 @@
 
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--ff-normal);
-  font-size: 16px;
   margin: 0;
   padding: 0;
   background-color: var(--base-color);
@@ -64,84 +59,48 @@ body {
 /* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER */
 
 header {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  overflow: auto;
-}
-
-header img {
-  align-self: center;
-  justify-self: center;
+  display: flex;
+  background-color: white;
+  justify-content: center;
 }
 
 #logo {
-  grid-column: 2 / 3;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  
-}
-
-#profile-pic {
-  width: 65%;
+  width: 8%;
   height: auto;
-  object-fit: cover;
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border: 8px solid var(--accent-clr);
-  padding: 12px;
-  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
-        
 }
+
+
 /* HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO */
 
 #hero {
   background-image: url(images/pawel-czerwinski-FLjfMUyng2Y-unsplash.jpg);
-  background-repeat: repeat;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(auto-fit);
-  padding: 3%;
-  margin: 0;
-  gap: 15px;
-  
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 2rem 8rem 2rem 8rem;
+  margin-bottom: 4rem;
   box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
 }
 
-h1 {
-  font-family: var(--ff-cursive);
-  font-size: 6rem;
-  color: var(--secondary-clr);
-  grid-column: 1;
-  margin: 0;
-  justify-self: center;
+#hero .imgs {
+  display: flex;
 }
 
-p {
-  color: var(--secondary-clr);
-  font-size: 1.2rem;
-  font-weight: 600;
-  grid-column: 2;
-  grid-row: 1 / 3;
-  align-self: center;
-  padding: 8px;
-  margin: auto;
-  line-height: 2.5rem;
+#hero #profile-pic {
+  width: 30%;
+  height: auto;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: .3em solid var(--accent-clr);
+  padding: .5em;
+  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
 }
 
-#btn {
-  grid-column: 1;
-  padding: 0;
-  text-align: center;
-  align-self: end;
-  
-}
-
-button {
-  border: 1px solid var(---clr);
+/*
+#hero button {
+  border: 1px solid var(--secondary-clr);
   padding-top: 28px;
   padding-bottom: 28px;
   background-color: var(--accent-clr);
@@ -149,24 +108,159 @@ button {
   font-weight: 600;
   font-size: 1rem;
   border-radius: 100%;
-  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
+  box-shadow: 0px 0px 3px 3px rgba(59, 3, 80, 0.5);
+  width: 15%;
+  margin: 0 0 0 8rem;
 }
 
-button:hover {
+#hero button:hover {
   box-shadow: none;
   font-style: italic;
   cursor: pointer;
 }
+*/
 
-h2 {
+#hero .text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#hero .text h1 {
   font-family: var(--ff-cursive);
-  letter-spacing: 0.05rem;
+  font-size: 5rem;
+  color: var(--secondary-clr);
+  margin: 0;
+}
+
+#hero .text p {
+  width: 65%;
+  font-size: 1.1rem;
+  font-family: "rubik";
+  align-self: center;
+  color: var(--secondary-clr);
+}
+
+
+/* SERVICES & PRICING SERVICES & PRICING SERVICES & PRICING SERVICES & PRICING SERVICES & PRICING */
+
+.menu { 
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  
+}
+
+.menu h2 {
+  font-family: var(--ff-cursive);
+  font-size: 3rem;
+  text-align: center;
+  align-self: center;
+  padding: 16px;
+  letter-spacing: 0.07rem;
+  background-color: var(--primary-clr);
+  color: white;
+  margin: 0;
+  grid-column: span 2;
+}
+
+.menu-item {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  column-gap: 2rem;
+  align-items: center;
+  padding: 2rem 2rem 2rem 4rem;
+  border-bottom: 1px solid var(--base-color);
+}
+.menu-item:last-child {
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+.service-heading {
+  font-weight: bold;
+  color: var(--secondary-clr);
+}
+
+.service {
+  grid-column: 2;
+  color: var(--secondary-clr);
+}
+
+.price {
+  grid-column: 3;
+  color: var(--primary-clr);
+}
+
+
+
+
+/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
+.gallery-heading {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery-heading img {
+  width: 20%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-heading #msg {
+  color: var(--primary-clr);
+  width: 25%;
+  height: auto;
+  text-align: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 4rem;
+  font-style: italic;
+}
+
+.gallery-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 1em 3em 1em;
+  align-items: center;
+  justify-self: center;
+}
+
+.gallery-container img {
+  width: 95%;
+  border-radius: 25px;
+  border: 0.5rem solid var(--accent-clr);
+}
+
+
+
+/* CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT */
+
+.contact {
+  font-family: var(--ff-cursive);
   font-size: 3rem;
   color: var(--secondary-clr);
   text-align: center;
+  align-self: center;
+  padding: 16px;
+  letter-spacing: 0.07rem;
+  margin: 0;
 }
-
-/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
-
 
 /* [src$='.jpeg'] will grab any image src that ends in ".jpeg"
