@@ -38,8 +38,19 @@
   <body>
     <!-- HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER -->
     <header>
-      <img id="logo" src="images/logo3.png" />
+      <div class="headerspace" id="headerspace"></div>
     </header>
+
+    <div class="topnav" id="myTopnav">
+      <img id="logo" src="images/logo3.png" />
+      <a href="#headerspace" class="active">Home</a>
+      <a href="#menu">Services</a>
+      <a href="#gallery-heading">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
     <!-- HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO -->
 
@@ -48,7 +59,7 @@
         <h1>Hello, Gorgeous!</h1>
         <p>
           My name is Glinda, and I have been helping people look and feel their
-          best for over 15 years in the Fuquay-Varina, North Carolina area. I am
+          best for over 25 years in the Fuquay-Varina, North Carolina area. I am
           dedicated to helping you achieve the look you desire, whether it's a
           fresh cut, a bold new color, or a complete makeover! Call to book your
           appointment today and discover your best hair day with me!
@@ -62,7 +73,7 @@
 
     <!-- MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU -->
 
-    <div class="menu">
+    <div class="menu" id="menu">
       <h2>Services & Pricing Menu</h2>
 
       <div class="menu-item">
@@ -178,7 +189,7 @@
 
     <!-- GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY -->
 
-    <div class="gallery-heading">
+    <div class="gallery-heading" id="gallery-heading">
       <img src="images/My Work.png" />
       <p id="msg">
         With a passion for hair and a commitment to quality, I offer hair
@@ -251,6 +262,37 @@
 
     <!-- CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT -->
 
-    <h2 class="contact">Let 's Connect</h2>
+    <h2 class="contact" id="contact">Let 's Connect</h2>
+
+    <section class="contact-container">
+      <div class="hours">
+        <h3>Operating Hours</h3>
+        <div style="font-size: 1rem; font-weight: 400">
+          <em
+            >* Not currently accepting walk-ins, you must call to schedule an
+            appointment.</em
+          ><br /><br />
+        </div>
+        <div>Tuesday: 10am - 8pm</div>
+        <div>Wednesday: 10am - 8pm</div>
+        <div>Thursday: 10am - 8pm</div>
+        <div>Friday: 10am - 8pm</div>
+        <div>Saturday: By appointment only</div>
+      </div>
+      <div class="address">
+        <h3>Address</h3>
+        <div>
+          129 Raleigh St.<br />
+          Fuquay-Varina, NC 27526
+        </div>
+      </div>
+      <div class="phone">
+        <h3>Call</h3>
+        <div>(919) 753-8771</div>
+      </div>
+    </section>
+    <footer>
+      &copy; 2024 Glinda Hill - Professional Hairdresser + Website by KM
+    </footer>
   </body>
 </html>
