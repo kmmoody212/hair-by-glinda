@@ -56,11 +56,87 @@ body {
   background-color: var(--base-color);
 }
 
-/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER */
+
+/* NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER */
+
+.topnav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffffff7f;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 20vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Links inside the navbar */
+.topnav a {
+  display: flex;
+  font-size: 1.3em;
+  color: var(--secondary-clr);
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover {
+  color: var(--primary-clr);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav #logo {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: left;
+    align-items: left;
+  }
+  .topnav.responsive a.icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    display: block;
+    top: 0;
+    width: 100%;
+  }
+
+  #hero {
+    flex-direction: column;
+  }
+}
 
 #logo {
-  width: 8%;
-  height: auto;
+  height: 175px;
+  display: block;
+  position: relative;
+}
+
+.headerspace {
+  background-color: white;
+  margin-top: 20.5vh;
+  
 }
 
 
@@ -68,12 +144,18 @@ body {
 
 #hero {
   background-image: url(images/pawel-czerwinski-FLjfMUyng2Y-unsplash.jpg);
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2rem 8rem 2rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit 2);
+  padding: 2rem;
   margin-bottom: 4rem;
   box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
 }
+
+#hero .imgs {
+justify-self: center;
+}
+
 
 #hero #profile-pic {
   
@@ -86,29 +168,8 @@ body {
   border: .3em solid var(--accent-clr);
   padding: .5em;
   box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
+  
 }
-
-/*
-#hero button {
-  border: 1px solid var(--secondary-clr);
-  padding-top: 28px;
-  padding-bottom: 28px;
-  background-color: var(--accent-clr);
-  color: var(--secondary-clr);
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 100%;
-  box-shadow: 0px 0px 3px 3px rgba(59, 3, 80, 0.5);
-  width: 15%;
-  margin: 0 0 0 8rem;
-}
-
-#hero button:hover {
-  box-shadow: none;
-  font-style: italic;
-  cursor: pointer;
-}
-*/
 
 #hero .text {
   display: flex;
@@ -125,13 +186,14 @@ body {
   font-size: 5rem;
   color: var(--secondary-clr);
   margin: 0;
+  align-self: center;
 }
 
 #hero .text p {
   width: 65%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-family: "rubik";
-  align-self: center;
+  align-self: end;
   color: var(--secondary-clr);
 }
 
@@ -205,14 +267,15 @@ body {
 }
 
 .gallery-heading img {
-  width: 20%;
-  height: auto;
+  width: 300px;
+  height: 300px;
   margin: 0;
   padding: 0;
 }
 
 .gallery-heading #msg {
   color: var(--primary-clr);
+  flex-wrap: wrap;
   width: 25%;
   height: auto;
   text-align: center;
@@ -251,15 +314,22 @@ body {
   margin: 0;  
 }
 
+
 .contact-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   background-image: url(images/pawel-czerwinski-FLjfMUyng2Y-unsplash.jpg);
   box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
-  padding: 8rem;
+  padding: 5rem 8rem 8rem 8rem;
   color: var(--secondary-clr);
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+.contact-container h3 {
+  font-size: 2.5rem;
+  font-family: var(--ff-cursive);
 }
 
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
