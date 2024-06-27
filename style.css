@@ -34,6 +34,7 @@
   font-style: normal;
 }
 
+
 :root {
   --base-color: #F1EBF4;
   --accent-clr: #EADBD2;
@@ -51,13 +52,22 @@
 
 body {
   font-family: var(--ff-normal);
+  background-color: var(--base-color);
   margin: 0;
   padding: 0;
-  background-color: var(--base-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
 /* NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER */
+
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
 
 .topnav {
   overflow: hidden;
@@ -65,11 +75,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background-color: #ffffff7f;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  height: 20vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  
 }
 
 /* Links inside the navbar */
@@ -86,45 +93,42 @@ body {
   color: var(--primary-clr);
 }
 
-.topnav .icon {
+/* hamburger menu bars */
+.topnav button {
   display: none;
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav #logo {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    flex-direction: column;
-  }
-}
+  
+  .topnav a:not(:last-child) {display: none;}
 
-@media screen and (max-width: 600px) {
+  .topnav button {
+    display: flex;
+    color:#C6A6E8;
+    background: none;
+    border: none;
+    margin: 1.8rem;
+    font-size: 1.5rem;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .mobile-menu .fa-solid {
+  font-size: 2rem;
+
+}
   .topnav.responsive {
-    position: fixed;
+    position: sticky;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: left;
-    align-items: left;
   }
-  .topnav.responsive a.icon {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    right: 0;
-    top: 0;
-  }
+  
   .topnav.responsive a {
     display: block;
     top: 0;
     width: 100%;
   }
 
-  #hero {
-    flex-direction: column;
-  }
 }
 
 #logo {
@@ -133,11 +137,7 @@ body {
   position: relative;
 }
 
-.headerspace {
-  background-color: white;
-  margin-top: 20.5vh;
-  
-}
+
 
 
 /* HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO */
@@ -267,8 +267,8 @@ justify-self: center;
 }
 
 .gallery-heading img {
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
   margin: 0;
   padding: 0;
 }
