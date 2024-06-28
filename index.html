@@ -30,7 +30,7 @@
     <link rel="manifest" href="images/favicon/site.webmanifest" />
     <!--CSS AND JAVASCRIPT-->
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script href="script.js"></script>
+    <script src="script.js"></script>
     <script
       src="https://kit.fontawesome.com/93bf94a79e.js"
       crossorigin="anonymous"
@@ -49,13 +49,21 @@
         <img id="logo" src="images/logo3.png" alt="Hair By Glinda logo" />
         <a href="#gallery-heading">Gallery</a>
         <a href="#contact">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
-        <button class="mobile-menu">
-          <span style="align-items: center">Menu</span>
-          <i class="fa-solid fa-bars" id="icon"></i>
+        <button class="mobile-menu" onclick="myFunction()">
+          <div class="bar"></div>
+          <!--<i class="fa-solid fa-bars"></i>-->
         </button>
       </div>
     </header>
+
+    <nav class="mobile-nav">
+      <a href="#top" id="menu-choice" onclick="myFunction()">Home</a>
+      <a href="#menu" id="menu-choice" onclick="myFunction()">Services</a>
+      <a href="#gallery-heading" id="menu-choice" onclick="myFunction()"
+        >Gallery</a
+      >
+      <a href="#contact" id="menu-choice" onclick="myFunction()">Contact</a>
+    </nav>
 
     <!-- HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO -->
 
@@ -72,7 +80,6 @@
       </div>
       <div class="imgs">
         <img id="profile-pic" src="images/44886-1.jpeg" />
-        <!--  <button type="button">Get in touch</button>  -->
       </div>
     </section>
 
