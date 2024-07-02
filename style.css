@@ -6,110 +6,438 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "rubikmedium";
-  src: url("fonts/rubik-medium-webfont.woff2") format("woff2"),
-    url("fonts/rubik-medium-webfont.woff") format("woff");
-  font-weight: normal;
+.rubik-normal {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-light {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rubik-semi-bold {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.rubik-bold {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
 }
 
 :root {
-  --base-color: #F1EBF4;
-  --accent-clr: #EADBD2;
-  --primary-clr: #C6A6E8;
-  --secondary-clr: #5E4C72;
+  --base-color: #f1ebf4;
+  --accent-clr: #eadbd2;
+  --primary-clr: #c6a6e8;
+  --secondary-clr: #5e4c72;
   --dark-clr: #392c46;
 
-  --ff: tahoma, sans-serif;
   --ff-cursive: "great_vibesregular", tahoma, sans-serif;
-  --ff-normal: "rubikmedium", tahoma, sans-serif;
-
-}
-
-* {
-  box-sizing: border-box;
+  --ff-normal: "rubik-normal", sans-serif;
+  --ff-light: "rubik-light", sans-serif;
+  --ff-semi-bold: "rubik-semi-bold", sans-serif;
+  --ff-bold: "rubik-bold", sans-serif;
 }
 
 body {
   font-family: var(--ff-normal);
-  font-size: 16px;
+  background-color: var(--base-color);
   margin: 0;
   padding: 0;
-  background-color: var(--base-color);
-}
-
-header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-header img {
-  align-self: center;
+/* NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER NAVBAR HEADER */
+
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
 }
 
-#hero {
-
-  background-color: #C6A6E8;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(auto-fit);
-  padding: 3%;
-  margin: 0;
-  
+/* Navbar */
+.topnav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffffff7f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-family: var(--ff-cursive);
-  font-size: 6rem;
-  color: var(--base-color);
-  grid-column: 1;
-  margin: 0;
-  
-  
+/* Links inside the navbar */
+.topnav a {
+  display: flex;
+  font-size: 1.3em;
+  color: var(--secondary-clr);
+  text-decoration: none;
 }
 
-p {
-  color: var(--base-color);
-  font-size: 1.2rem;
-  grid-column: 2;
-  grid-row: 1 / 3;
-  align-self: center;
-  padding: 8px;
-  margin: auto;
-  
-  
-  
-
+.topnav a:hover {
+  color: var(--primary-clr);
 }
 
-#btn {
+/* Make the mobile view menu opaque when opened */
+.topnav.is-active {
+  background-color: rgb(245, 245, 248);
+}
+
+/* Hamburger menu - not displayed until screen is under 600px wide */
+.topnav .mobile-menu {
+  display: none;
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+/* Creating the 3 bars in the menu */
+.mobile-menu .bar,
+.mobile-menu:after,
+.mobile-menu:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
   background-color: var(--primary-clr);
-  grid-column: 1;
-  padding: 0;
-  text-align: center;
-  margin-right: 25%;
-  margin-top: 10%;
-
-
+  margin: 6px 0px;
+  transition: 0.1s;
 }
-button {
-  border: 1px solid var(--secondary-clr);
-  padding-top: 28px;
-  padding-bottom: 28px;
-  background-color: var(--secondary-clr);
-  color: var(--base-color);
-  font-family: var(--ff-normal);
+
+/* Making an 'X' when the class ".is-active" is added*/
+.mobile-menu.is-active:before {
+  transform: translate(-9px, 6px) rotate(45deg);
+}
+
+.mobile-menu.is-active:after {
+  transform: translate(-9px, -16px) rotate(-45deg);
+}
+
+.mobile-menu.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  display: block;
+  top: 100%;
+  width: 100%;
   font-size: 1rem;
-  border-radius: 100%;
 }
 
-h2 {
-  font-family: var(--ff-cursive);
-  letter-spacing: 0.05rem;
-  font-size: 3rem;
+.mobile-nav.is-active {
+  top: 0;
+  margin-top: 160px;
+  background-color: rgb(245, 245, 248);
+}
+
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-clr);
+}
+
+.mobile-nav a:hover {
   color: var(--secondary-clr);
 }
 
-/* Glinda's image have a box-shadow?
-/* [src$='.jpeg'] will grab any image src that ends in ".jpeg"
+@media screen and (max-width: 600px) {
+  .topnav a:not(:last-child) {
+    display: none;
+  }
+  .topnav .mobile-menu {
+    float: right;
+    display: block;
+  }
+}
+
+#logo {
+  height: 175px;
+  display: block;
+  position: relative;
+}
+
+/* HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO */
+
+#hero {
+  background-image: url(images/pawel-czerwinski-FLjfMUyng2Y-unsplash.jpg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit 2);
+  padding: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
+}
+
+#hero .imgs {
+  justify-self: center;
+}
+
+#hero #profile-pic {
+  max-width: 250px;
+  height: auto;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0.3em solid var(--accent-clr);
+  padding: 0.5em;
+  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
+}
+
+#hero .text {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#hero .text h1 {
+  font-family: var(--ff-cursive);
+  font-size: 5rem;
+  color: var(--secondary-clr);
+  margin: 0;
+  align-self: center;
+}
+
+#hero .text p {
+  width: 75%;
+  font-size: 1.2rem;
+  font-family: "rubik";
+  align-self: end;
+  color: var(--secondary-clr);
+}
+
+@media screen and (width < 1044px) {
+  #hero {
+    display: flex;
+    flex-direction: column;
+  }
+  #hero .text h1 {
+    font-size: 3.5rem;
+  }
+  #hero .text p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  #hero .imgs {
+    align-self: center;
+  }
+}
+
+/* SERVICES & PRICING SERVICES & PRICING SERVICES & PRICING SERVICES & PRICING SERVICES & PRICING */
+
+.menu {
+  max-width: 100%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.753);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  align-items: center;
+}
+
+.menu h2 {
+  font-family: var(--ff-cursive);
+  font-size: 3rem;
+  text-align: center;
+  align-self: center;
+  padding: 16px;
+  letter-spacing: 0.07rem;
+  background-color: var(--primary-clr);
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-weight: 300;
+  grid-column: span 2;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid var(--base-color);
+  row-gap: 1rem;
+}
+.menu-item:last-child {
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+.service-heading {
+  font-weight: bold;
+  color: var(--secondary-clr);
+}
+
+.service {
+  grid-column: 2;
+  color: var(--secondary-clr);
+}
+
+.price {
+  grid-column: 3;
+  color: var(--primary-clr);
+}
+
+@media screen and (max-width: 940px) {
+  .menu-item {
+    grid-template-columns: 75px 1fr 1fr;
+    column-gap: 0.3rem;
+    row-gap: 1rem;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .price {
+    align-self: end;
+  }
+}
+
+/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
+.gallery-heading {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery-heading img {
+  max-width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-heading #msg {
+  color: var(--primary-clr);
+  flex-wrap: wrap;
+  max-width: 25%;
+  text-align: center;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 4px;
+  margin: 0;
+  font-style: italic;
+}
+
+.gallery-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 1em 3em 1em;
+  align-items: center;
+  justify-self: center;
+}
+
+.gallery-container img {
+  width: 95%;
+  border-radius: 25px;
+  border: 0.5rem solid var(--accent-clr);
+}
+
+@media screen and (width <= 750px) {
+  .gallery-heading img {
+    max-width: 225px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gallery-heading #msg {
+    font-size: 1rem;
+    max-width: 75%;
+  }
+}
+
+@media screen and (width < 600px) {
+  .gallery-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .gallery-container img {
+    max-width: 100%;
+    align-self: center;
+  }
+}
+
+/* CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT */
+
+.contact {
+  font-family: var(--ff-cursive);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--secondary-clr);
+  padding: 1rem 1rem 1rem 8rem;
+  letter-spacing: 0.07rem;
+  margin: 0;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-image: url(images/pawel-czerwinski-FLjfMUyng2Y-unsplash.jpg);
+  box-shadow: 0px 0px 4px 4px rgba(59, 3, 80, 0.5);
+  padding: 5rem 8rem 8rem 8rem;
+  color: var(--secondary-clr);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-container h3 {
+  font-size: 2.5rem;
+  font-family: var(--ff-cursive);
+}
+
+@media screen and (width < 600px) {
+  .contact {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  .contact-container h3 {
+    margin-bottom: 12px;
+  }
+
+  .phone div {
+    font-size: 1.5rem;
+  }
+}
+
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+footer {
+  background-color: var(--accent-clr);
+  padding: 2rem;
+  color: #392c46;
+  font-size: 0.8rem;
+  text-align: center;
+}
