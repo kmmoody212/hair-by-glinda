@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- FAVICON ICONS -->
     <link
       rel="apple-touch-icon"
@@ -24,52 +30,281 @@
     <link rel="manifest" href="images/favicon/site.webmanifest" />
     <!--CSS AND JAVASCRIPT-->
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script href="script.js" defer></script>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/93bf94a79e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Hair by Glinda</title>
   </head>
 
   <body>
+    <!-- HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER -->
+
     <header>
-      <img
-        src="images/Hair by Glinda.svg"
-        width="400px"
-        height="auto"
-        style="margin-left: 0%; margin-right: 18%"
-      />
-      <img
-        src="images/44886-1.jpeg"
-        width="220px"
-        height="auto"
-        style="
-          border-top-left-radius: 150px;
-          border-top-right-radius: 150px;
-          border-bottom-left-radius: 10px;
-          border-bottom-right-radius: 10px;
-          border: 4px solid var(--primary-clr);
-          padding: 12px;
-          margin-left: 0%;
-          margin-right: 7%;
-        "
-      />
+      <div class="topnav" id="myTopnav">
+        <a href="#top">Home</a>
+        <a href="#menu">Services</a>
+        <img id="logo" src="images/logo3.png" alt="Hair By Glinda logo" />
+        <a href="#gallery-heading">Gallery</a>
+        <a href="#contact">Contact</a>
+        <button class="mobile-menu" onclick="myFunction()">
+          <div class="bar"></div>
+          <!--<i class="fa-solid fa-bars"></i>-->
+        </button>
+      </div>
     </header>
 
-    <section id="hero">
-    <h1>Hello, Gorgeous!</h1>
-    <p style="line-height: 1.5rem">
-      My name is Glinda, and I have been helping people look and feel their best
-      for over 15 years in Fuquay-Varina, North Carolina. I am dedicated to
-      helping you achieve the look you desire, whether it's a fresh cut, a bold
-      new color, or a complete makeover! With a passion for hair and a
-      commitment to quality, I offer hair services tailored to your unique style
-      in a relaxing and friendly environment. Call to book your appointment
-      today and discover your best hair day with me!
-    </p>
-    <div id="btn"><button type="button">Get in touch</button></div>
-  </section>
+    <nav class="mobile-nav">
+      <a href="#top" id="menu-choice" onclick="myFunction()">Home</a>
+      <a href="#menu" id="menu-choice" onclick="myFunction()">Services</a>
+      <a href="#gallery-heading" id="menu-choice" onclick="myFunction()"
+        >Gallery</a
+      >
+      <a href="#contact" id="menu-choice" onclick="myFunction()">Contact</a>
+    </nav>
 
-    <h2>My Work</h2>
-    <h2>Services & Pricing Menu</h2>
-    <h2>Let's Connect</h2>
+    <!-- HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO -->
+
+    <section id="hero">
+      <div class="text">
+        <h1>Hello, Gorgeous!</h1>
+        <p>
+          My name is Glinda, and I have been helping people look and feel their
+          best for over 25 years in the Fuquay-Varina, North Carolina area. I am
+          dedicated to helping you achieve the look you desire, whether it's a
+          fresh cut, a bold new color, or a complete makeover! Call to book your
+          appointment today and discover your best hair day with me!
+        </p>
+      </div>
+      <div class="imgs">
+        <img id="profile-pic" src="images/44886-1.jpeg" />
+      </div>
+    </section>
+
+    <!-- MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU -->
+
+    <div class="menu" id="menu">
+      <h2>Services & Pricing Menu</h2>
+
+      <div class="menu-item">
+        <div class="service-heading">Haircut</div>
+        <br />
+        <div class="service">Men</div>
+        <div class="price">$ 30</div>
+        <div class="service">Women</div>
+        <div class="price">$ 40</div>
+        <div class="service">Children (10 & under)</div>
+        <div class="price">$ 20</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="service-heading">Shampoo, Cut, & Style</div>
+        <br />
+        <div class="service">Women's</div>
+        <div class="price">$ 45 +</div>
+        <div class="service">Shampoo & Style <em>only</em></div>
+        <div class="price">$ 35 +</div>
+        <div class="service">Conditioning Treatment</div>
+        <div class="price">$ 30 +</div>
+        <div class="service"></div>
+        <div class="price" style="margin-left: 1rem">
+          <em>* longer hair additional cost</em>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="service-heading">Color</div>
+        <br />
+        <div class="service">Root Retouch</div>
+        <div class="price">$ 60 +</div>
+        <div class="service">Color, Cut, & Style</div>
+        <div class="price">$ 95 +</div>
+        <div class="service">Color Gloss</div>
+        <div class="price">$ 30 +</div>
+        <div class="service"></div>
+        <div class="price" style="margin-left: 1rem">
+          <em>* longer hair additional cost</em>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="service-heading">Foils</div>
+        <br />
+        <div class="service">Highlights (without cut)</div>
+        <div class="price">$ 110 +</div>
+        <div class="service">Short Hair Cap Highlights (without cut)</div>
+        <div class="price">$ 75 +</div>
+        <div class="service">Short Hair Cap Highlights (with cut)</div>
+        <div class="price">$ 95 +</div>
+        <div class="service">Dimensional Color (base color +1)</div>
+        <div class="price">$ 110 +</div>
+        <div class="service">each additional color</div>
+        <div class="price">$ 15</div>
+        <div class="service"></div>
+        <div class="price" style="margin-left: 1rem">
+          <em>* longer hair additional cost</em>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="service-heading">Fashion Colors</div>
+        <br />
+        <div class="service">without bleaching</div>
+        <div class="price">$ 95 +</div>
+        <div class="service">with bleaching</div>
+        <div class="price">additional $75</div>
+        <div class="service">Balayage</div>
+        <div class="price">$ 110 +</div>
+        <div class="service">Brazilian Blowout</div>
+        <div class="price">$ 300 +</div>
+        <div class="service"></div>
+        <div class="price" style="margin-left: 1rem">
+          <em>* longer hair additional cost</em>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="service-heading">Perms</div>
+        <br />
+        <div class="service">Regular (short hair, without cut)</div>
+        <div class="price">$ 65</div>
+        <div class="service">Full Regular (full cut)</div>
+        <div class="price">$ 100 +</div>
+        <div class="service">Spiral Wrap Perm</div>
+        <div class="price">$ 120 +</div>
+        <div class="service"></div>
+        <div class="price" style="margin-left: 1rem">
+          <em>* longer hair additional cost</em>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="service-heading">Waxing</div>
+        <br />
+        <div class="service">Eyebrows <em>only</em></div>
+        <div class="price">$ 15</div>
+        <div class="service">Eyebrows & Lip</div>
+        <div class="price">$ 25</div>
+        <div class="service">Full Face Wax</div>
+        <div class="price">$ 40</div>
+      </div>
+
+      <div class="menu-item">
+        <div class="service-heading">Extensions</div>
+        <br />
+        <div class="service">Consultation Required</div>
+        <div class="price">Deposit Required</div>
+      </div>
+    </div>
+
+    <!-- GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY -->
+
+    <div class="gallery-heading" id="gallery-heading">
+      <img src="images/My Work.png" />
+      <p id="msg">
+        With a passion for hair and a commitment to quality, I offer hair
+        services tailored to your unique style in a relaxing and friendly
+        environment.
+      </p>
+    </div>
+
+    <section class="gallery-container">
+      <div>
+        <img
+          src="images/gallery/429857080_10225815935206906_7507094253980350770_n.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="images/gallery/429898171_10225815933766870_3324925333662239892_n.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="images/gallery/430023519_10225824206293678_1682576699052334100_n.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="images/gallery/430140149_10225824206853692_5892372674248940475_n.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="images/gallery/445488653_10226244446439419_7282085078570979241_n.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="images/gallery/448357791_10226322293265541_587783287595115038_n.jpg"
+        />
+      </div>
+      <div><img src="images/gallery/IMG_8321.PNG" /></div>
+      <div><img src="images/gallery/IMG_8322.PNG" /></div>
+      <div><img src="images/gallery/IMG_8323.JPG" /></div>
+      <div><img src="images/gallery/IMG_8324.PNG" /></div>
+      <div><img src="images/gallery/IMG_8325.PNG" /></div>
+      <div><img src="images/gallery/IMG_8329.PNG" /></div>
+      <div><img src="images/gallery/IMG_8330.PNG" /></div>
+      <div><img src="images/gallery/IMG_8331.PNG" /></div>
+      <div><img src="images/gallery/IMG_8334.PNG" /></div>
+      <div><img src="images/gallery/IMG_8335.PNG" /></div>
+      <div><img src="images/gallery/IMG_8337.PNG" /></div>
+      <div><img src="images/gallery/IMG_8340.PNG" /></div>
+      <div><img src="images/gallery/IMG_8341.PNG" /></div>
+      <div><img src="images/gallery/IMG_8343.PNG" /></div>
+      <div><img src="images/gallery/IMG_8345.PNG" /></div>
+      <div><img src="images/gallery/IMG_8346.PNG" /></div>
+      <div><img src="images/gallery/IMG_8347.PNG" /></div>
+      <div><img src="images/gallery/IMG_8350.PNG" /></div>
+      <div><img src="images/gallery/IMG_8354.PNG" /></div>
+      <div><img src="images/gallery/IMG_8355.PNG" /></div>
+      <div><img src="images/gallery/IMG_8356.PNG" /></div>
+      <div><img src="images/gallery/IMG_8357.PNG" /></div>
+      <div><img src="images/gallery/IMG_8358.PNG" /></div>
+      <div><img src="images/gallery/IMG_8359.PNG" /></div>
+      <div><img src="images/gallery/IMG_8361.PNG" /></div>
+      <div><img src="images/gallery/IMG_8363.PNG" /></div>
+      <div><img src="images/gallery/IMG_8365.PNG" /></div>
+      <div><img src="images/gallery/IMG_8366.PNG" /></div>
+      <div><img src="images/gallery/IMG_8367.PNG" /></div>
+    </section>
+
+    <!-- CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT -->
+
+    <h2 class="contact" id="contact">Let 's Connect</h2>
+
+    <section class="contact-container">
+      <div class="hours">
+        <h3 style="margin-bottom: 0">Operating Hours</h3>
+        <div style="font-size: 1rem">
+          <em
+            >* Not currently accepting walk-ins, you must call to schedule an
+            appointment.</em
+          ><br /><br />
+        </div>
+        <div>Tuesday: 10am - 8pm</div>
+        <div>Wednesday: 10am - 8pm</div>
+        <div>Thursday: 10am - 8pm</div>
+        <div>Friday: 10am - 8pm</div>
+        <div>Saturday: By appointment only</div>
+      </div>
+      <div class="address">
+        <h3>Address</h3>
+        <div>
+          129 Raleigh St.<br />
+          Fuquay-Varina, NC 27526
+        </div>
+      </div>
+      <div class="phone">
+        <h3>Call</h3>
+        <div>(919) 753-8771</div>
+      </div>
+    </section>
+    <footer>
+      &copy; 2024 Glinda Hill - Professional Hairdresser + Website by KM
+    </footer>
   </body>
 </html>
