@@ -33,7 +33,7 @@ function myFunction() {
   navBar.classList.toggle("is-active");
 }
 
-// ─── GALLERY 
+// ─── GALLERY
 // To swap images: edit this list only — add, remove, or rename filenames.
 
 const galleryImages = [
