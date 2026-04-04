@@ -1,6 +1,7 @@
 @font-face {
   font-family: "great_vibesregular";
-  src: url("fonts/greatvibes-regular-webfont.woff2") format("woff2"),
+  src:
+    url("fonts/greatvibes-regular-webfont.woff2") format("woff2"),
     url("fonts/greatvibes-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -49,7 +50,7 @@
 }
 
 body {
-  font-family: var(--ff-normal);
+  font-family: "Rubik", sans-serif;
   background-color: var(--base-color);
   margin: 0;
   padding: 0;
@@ -223,7 +224,7 @@ header {
 #hero .text p {
   width: 75%;
   font-size: 1.2rem;
-  font-family: "rubik";
+  font-family: "rubik", sans-serif;
   align-self: end;
   color: var(--secondary-clr);
 }
