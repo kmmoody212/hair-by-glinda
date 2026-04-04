@@ -224,7 +224,7 @@ header {
 #hero .text p {
   width: 75%;
   font-size: 1.2rem;
-  font-family: "rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   align-self: end;
   color: var(--secondary-clr);
 }
